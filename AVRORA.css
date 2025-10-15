@@ -1,10 +1,10 @@
-
 body {
     font-family: "Segoe UI", sans-serif;
     margin: 0;
     background: #fff;
     color: #222;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -36,6 +36,7 @@ nav a {
 nav a:hover {
     color: #ff3c3c;
 }
+
 .sale {
   display: flex;
   justify-content: space-between;
@@ -65,7 +66,6 @@ nav a:hover {
   background-color: #d32f2f;
   margin-top: -20px;
 }
-
 .sale-img {
   position: relative;
 }
@@ -98,10 +98,20 @@ nav a:hover {
   transform: translate(-50%, -50%);
   z-index: 1;
 }
+
 .category {
     text-align: center;
     padding: 60px 20px;
 }
+.category h2 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #d32f2f;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
 .books {
     display: flex;
     justify-content: center;
@@ -110,18 +120,32 @@ nav a:hover {
     margin-top: 20px;
 }
 .book {
-    width: 200px;
+    flex: 1 1 220px;
+    max-width: 250px;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    padding: 15px;
+}
+.book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 .book img {
     width: 100%;
-    height: auto;
+    height: 300px;
+    object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    margin-bottom: 10px;
 }
-.book img:hover {
-    transform: scale(1.05);
+.book p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #333;
 }
+
 footer {
     background: #1e1e1e;
     color: #ddd;
@@ -140,10 +164,15 @@ footer {
     margin-top: 30px;
     color: #888;
 }
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     text-align: center;
+  }
+  nav a {
+    margin: 10px;
+    display: inline-block;
   }
   .sale {
     flex-direction: column;
@@ -160,4 +189,9 @@ footer {
     width: 300px;
     height: 15px;
   }
+  .book img {
+    height: 250px;
+  }
 }
+
+
